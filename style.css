@@ -6,3 +6,4 @@
 .map-preview{touch-action:none;cursor:grab}.map-preview:active{cursor:grabbing}.map-preview:after,.map-preview .map-grid,.map-preview .map-pin,.map-preview .map-caption{pointer-events:none}
 .map-preview:after{display:none}
 #saved,#guide{display:none}
+.route-distance-label{padding:4px 7px;border:2px solid #07526b;border-radius:12px;background:#fff;color:#07526b;font:700 11px 'DM Sans',sans-serif;white-space:nowrap;box-shadow:0 2px 7px #07526b33}
