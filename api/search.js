@@ -9,6 +9,6 @@ export default async function handler(req, res) {
   });
   const data = await response.json();
   if (!response.ok) return res.status(response.status).json({ error: '네이버 장소 검색에 실패했어요.' });
-  const items = (data.items || []).map(item => ({ name: item.title.replace(/<[^>]*>/g, ''), category: item.category, address: item.roadAddress || item.address, longitude: Number(item.mapx), latitude: Number(item.mapy), link: item.link }));
+  const items = (data.items || []).map(item => ({ name: item.title.replace(/<[^>]*>/g, ''), category: item.category, address: item.roadAddress || item.address, longitude: Number(item.mapx) / 10000000, latitude: Number(item.mapy) / 10000000, link: item.link }));
   return res.status(200).json({ items });
 }
