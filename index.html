@@ -37,6 +37,20 @@
       <div class="plan-row"><div><label>여행 스타일</label><div class="segmented" id="styleChoices"><button class="active" data-style="mix">대표 + 로컬</button><button data-style="tourist">대표 명소</button><button data-style="local">로컬 스폿</button></div></div><div><label>이동 수단</label><div class="segmented" id="transportChoices"><button class="active" data-transport="car">렌터카</button><button data-transport="taxi">택시</button></div></div><button class="primary-btn" id="recommendBtn">추천 코스 보기 <span>→</span></button></div>
     </section>
 
+    <section class="builder card" id="builder">
+      <div class="section-heading"><div><p class="eyebrow">BUILD YOUR OWN TRIP</p><h2>직접 일정 만들기</h2><p class="builder-intro">네이버 지도에서 장소를 찾고, 원하는 날짜에 바로 담아보세요.</p></div><span class="step">MY PLAN</span></div>
+      <div class="builder-layout">
+        <div class="builder-left">
+          <div class="search-box builder-search"><span>⌕</span><input id="builderSearch" type="search" placeholder="장소명이나 지역을 검색하세요" /></div>
+          <div id="builderResults" class="builder-results"></div>
+          <div class="day-tabs" id="dayTabs"><button class="active" data-day="1일차">1일차</button><button data-day="2일차">2일차</button><button data-day="3일차">3일차</button></div>
+          <div class="selected-title"><b id="selectedDay">1일차 일정</b><span id="selectedCount">0곳</span></div>
+          <div id="itinerary" class="itinerary"><p class="empty">검색한 장소를 일정에 추가해보세요.</p></div>
+        </div>
+        <div class="map-preview"><div class="map-grid"></div><div class="map-pin pin-a">1</div><div class="map-pin pin-b">2</div><div class="map-pin pin-c">3</div><div class="map-caption"><b>네이버 지도 연동 영역</b><small>장소를 추가하면 경로가 표시됩니다.</small></div></div>
+      </div>
+    </section>
+
     <section class="results" id="saved">
       <div class="results-top"><div><p class="eyebrow">CURATED FOR YOU</p><h2><span id="resultTitle">대표와 로컬을 반반으로</span><br>즐기는 2박 3일</h2></div><div class="result-actions"><button class="filter active">추천순</button><button class="filter">가격순</button><button class="filter">거리순</button></div></div>
       <div class="place-search"><div class="search-copy"><p class="eyebrow">SEARCH POHANG</p><h3>가고 싶은 장소를 검색해보세요</h3><p>장소를 누르면 추천 코스와의 거리를 한눈에 볼 수 있어요.</p></div><div class="search-box"><span>⌕</span><input id="placeSearch" type="search" placeholder="영일대, 호미곶, 카페 검색" /></div><div id="searchResults" class="search-results"></div></div>
