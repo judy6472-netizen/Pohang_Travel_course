@@ -4,3 +4,4 @@
 .naver-search-btn{border:0;background:var(--deep);color:#fff;padding:10px 13px;white-space:nowrap;font:700 11px inherit;cursor:pointer}.naver-search-btn:hover{background:var(--coral)}
 .focus-place,.remove-place{border:1px solid var(--line);background:#fff;color:var(--deep);font-size:10px;cursor:pointer;white-space:nowrap;padding:6px 8px}.focus-place:hover{border-color:var(--coral);color:var(--coral)}.remove-place{color:#a45b5b}.remove-place:hover{border-color:#a45b5b;background:#fff5f5}
 .map-preview{touch-action:none;cursor:grab}.map-preview:active{cursor:grabbing}.map-preview:after,.map-preview .map-grid,.map-preview .map-pin,.map-preview .map-caption{pointer-events:none}
+.map-preview:after{display:none}
