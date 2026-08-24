@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>포항 핫플 나들이 추천기</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Noto+Sans+KR:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><span class="brand-mark">P</span><span>POHANG<br><small>day trip planner</small></span></div>
+    <nav><a class="active" href="#discover">탐색</a><a href="#saved">저장한 일정</a><a href="#guide">여행 가이드</a></nav>
+    <button class="outline-btn" id="shareTop">공유하기 <span>↗</span></button>
+  </header>
+
+  <main>
+    <section class="hero" id="discover">
+      <div class="hero-copy">
+        <p class="eyebrow">A LOCAL-FIRST GUIDE TO POHANG</p>
+        <h1>이번 포항은<br><em>어디로</em> 가볼까요?</h1>
+        <p class="hero-sub">대표 명소부터 동네 사람만 아는 쉼표까지.<br>나에게 맞는 포항의 하루를 발견해보세요.</p>
+        <div class="hero-meta"><span>8.29 — 8.31</span><span>4명</span><span>예산 200만원</span></div>
+      </div>
+      <div class="hero-art"><div class="sun"></div><div class="wave wave-one"></div><div class="wave wave-two"></div><div class="lighthouse">✦</div><span class="art-label">영일대 해수욕장<br><small>YEONGILDAE BEACH</small></span></div>
+    </section>
+
+    <section class="planner card">
+      <div class="section-heading"><div><p class="eyebrow">PLAN YOUR DAY</p><h2>어떤 포항을 만나고 싶나요?</h2></div><span class="step">01 / 03</span></div>
+      <div class="choice-grid" id="moodChoices">
+        <button class="choice selected" data-mood="activity"><span class="choice-icon">✹</span><b>움직이는 하루</b><small>액티비티와 바다를<br>온몸으로 즐겨요</small></button>
+        <button class="choice" data-mood="calm"><span class="choice-icon">◌</span><b>고요한 하루</b><small>천천히 걷고, 쉬고,<br>멍때려요</small></button>
+        <button class="choice" data-mood="local"><span class="choice-icon">◎</span><b>로컬의 하루</b><small>현지인처럼 먹고<br>동네를 발견해요</small></button>
+      </div>
+      <div class="plan-row"><div><label>여행 스타일</label><div class="segmented" id="styleChoices"><button class="active" data-style="mix">대표 + 로컬</button><button data-style="tourist">대표 명소</button><button data-style="local">로컬 스폿</button></div></div><div><label>이동 수단</label><div class="segmented" id="transportChoices"><button class="active" data-transport="car">렌터카</button><button data-transport="taxi">택시</button></div></div><button class="primary-btn" id="recommendBtn">추천 코스 보기 <span>→</span></button></div>
+    </section>
+
+    <section class="results" id="saved">
+      <div class="results-top"><div><p class="eyebrow">CURATED FOR YOU</p><h2><span id="resultTitle">대표와 로컬을 반반으로</span><br>즐기는 2박 3일</h2></div><div class="result-actions"><button class="filter active">추천순</button><button class="filter">가격순</button><button class="filter">거리순</button></div></div>
+      <div class="route-grid" id="routeGrid"></div>
+    </section>
+
+    <section class="budget card" id="guide"><div class="budget-head"><div><p class="eyebrow">YOUR BUDGET</p><h2>예산 안에서, 충분히</h2><p>4명 · 2박 3일 기준 예상 금액이에요.</p></div><div class="budget-total"><strong>₩<span id="budgetValue">1,764,000</span></strong><small>/ 2,000,000원</small></div></div><div class="budget-bar"><span></span></div><div class="budget-items"><div><span class="dot coral"></span><b>숙박</b><strong>₩720,000</strong></div><div><span class="dot blue"></span><b>교통</b><strong>₩420,000</strong></div><div><span class="dot yellow"></span><b>식사·카페</b><strong>₩504,000</strong></div><div><span class="dot green"></span><b>체험·기타</b><strong>₩120,000</strong></div></div></section>
+  </main>
+  <div class="toast" id="toast">일정을 저장했어요. 링크를 복사해 카카오톡으로 공유해보세요.</div>
+  <script src="app.js"></script>
+</body>
+</html>
