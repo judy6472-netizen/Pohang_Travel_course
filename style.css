@@ -7,3 +7,4 @@
 .map-preview:after{display:none}
 #saved,#guide{display:none}
 .route-distance-label{padding:4px 7px;border:2px solid #07526b;border-radius:12px;background:#fff;color:#07526b;font:700 11px 'DM Sans',sans-serif;white-space:nowrap;box-shadow:0 2px 7px #07526b33}
+.plan-marker{display:grid;place-items:center;width:30px;height:30px;border-radius:50% 50% 50% 0;transform:rotate(-45deg);background:#07526b;color:#fff;border:3px solid #fff;box-shadow:0 2px 8px #073b4c66;font:700 13px 'DM Sans',sans-serif}.plan-marker span{transform:rotate(45deg)}
