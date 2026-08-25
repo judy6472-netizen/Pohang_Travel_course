@@ -58,4 +58,5 @@ document.querySelector('#itinerary').addEventListener('dragstart',e=>{const hand
 document.querySelectorAll('.drag-handle').forEach(handle=>handle.draggable=true);
 document.querySelector('#builderResults').addEventListener('click',()=>document.querySelector('#builderResults').classList.remove('popup-open'));
 document.querySelector('#naverSearchBtn').addEventListener('click',()=>document.querySelector('#builderResults').classList.add('popup-open'));document.querySelector('#builderSearch').addEventListener('keydown',e=>{if(e.key==='Enter')document.querySelector('#builderResults').classList.add('popup-open')});
+new MutationObserver(()=>{const box=document.querySelector('#builderResults');if(box&&!box.querySelector('.empty')&&box.children.length)box.classList.add('popup-open')}).observe(document.querySelector('#builderResults'),{childList:true});
 const guaranteedRenderItinerary=renderItinerary;renderItinerary=function(){guaranteedRenderItinerary();updateGlobalPlanNumbers();updateTimelineDistances();enablePlanDragging();renderDayRoute()};renderItinerary();
