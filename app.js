@@ -43,3 +43,4 @@ let dayRouteOverlays=[];function routeDistance(a,b){const rad=Math.PI/180,lat1=a
 const originalRenderItinerary=renderItinerary;renderItinerary=function(){originalRenderItinerary();updateTimelineDistances();renderDayRoute()};
 updateTimelineDistances=function(){document.querySelectorAll('.trip-day').forEach(section=>{const list=plans[section.dataset.day]||[];section.querySelectorAll('.trip-leg').forEach((label,index)=>{const a=list[index]?.location,b=list[index+1]?.location;label.textContent=a&&b?`${routeDistance(a,b).toFixed(1)} km`:'거리 계산 중'})})};updateTimelineDistances();
 const roadRouteRender=renderDayRoute;renderDayRoute=async function(){await roadRouteRender();dayRouteOverlays.forEach(overlay=>{if(overlay instanceof naver.maps.Polyline)overlay.setOptions({strokeStyle:'dash',strokeOpacity:.9})})};
+new MutationObserver(()=>updateTimelineDistances()).observe(document.querySelector('#itinerary'),{childList:true,subtree:true});updateTimelineDistances();
