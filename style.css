@@ -20,4 +20,6 @@ body{overflow:hidden}.topbar{display:none}main{height:100vh}.builder{position:fi
 .topbar{display:none}.builder-left{left:20px}
 #itinerary,.selected-title,.builder-left>.day-tabs{display:none}
 .map-category-chips{display:none}
+.builder-left{overflow:visible}.builder-left .builder-results{position:absolute;left:20px;right:20px;top:174px;z-index:60;max-height:430px;overflow-y:auto;margin:0;padding:8px;background:#fff;border:1px solid #d8e3fa;border-radius:12px;box-shadow:0 14px 35px #003e7a24}.builder-left .builder-results:empty{display:none}.builder-left .builder-result{padding:13px 12px;border:0;border-bottom:1px solid #eef1f8;border-radius:8px;background:#fff}.builder-left .builder-result:last-child{border-bottom:0}.builder-left .builder-result:hover{background:#f0f3ff}.builder-left .builder-results .empty{padding:12px;margin:0}
 .trip-leg{left:-38px;bottom:-19px;padding:5px 8px;border:1px solid #d6e3e5;border-radius:7px;background:#fff;color:#334b55;font:700 11px 'DM Sans',sans-serif;box-shadow:0 1px 3px #07526b12}
+.builder-left .builder-results{display:none}.builder-left .builder-results.popup-open{display:grid}
